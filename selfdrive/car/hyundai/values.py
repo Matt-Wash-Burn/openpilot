@@ -710,6 +710,7 @@ DBC = {
   CAR.PALISADE: dbc_dict('hyundai_kia_generic', None),
   CAR.VELOSTER: dbc_dict('hyundai_kia_generic', None),
   CAR.KIA_CEED: dbc_dict('hyundai_kia_generic', None),
+  CAR.SONATA_HYBRID: dbc_dict('hyundai_kia_generic', None),
 }
 
 STEER_THRESHOLD = 150
