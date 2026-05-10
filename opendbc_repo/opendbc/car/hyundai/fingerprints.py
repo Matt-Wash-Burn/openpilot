@@ -467,6 +467,44 @@ FW_VERSIONS = {
       b'\xf1\x00ON  MFC  AT USA LHD 1.00 1.04 99211-S9100 211227',
     ],
   },
+  CAR.HYUNDAI_PALISADE_HEV: {
+    (Ecu.combinationMeter, 0x7c6, None): [
+      b'\xf1\x00471',
+      b'\xf1\x8b &\x02\x12',
+      b'\xf1\x10',
+    ],
+    (Ecu.fwdRadar, 0x7d0, None): [
+      b'\xf1\x00LX3__               1.00 1.00 99110P9210          ',
+      b'\xf1\x8b %\x12\t',
+    ],
+    (Ecu.fwdCamera, 0x7c4, None): [
+      b'\xf1\x00LX31.001.001.002591000HKP_LX325_50919099211P9030',
+      b'\xf1\x8b %\x120',
+    ],
+    (Ecu.hvac, 0x7b3, None): [
+      b'\xf1\x00LX3   97255-DU090CONTROL UNIT        2591.1.06.00 v24.05.01   ',
+      b'\xf1\x8b &\x02\x12',
+      b'\xf1\x10\x07',
+    ],
+    (Ecu.adas, 0x730, None): [
+      b'\xf1\x8b &\x02\x05',
+    ],
+    (Ecu.cornerRadar, 0x7b7, None): [
+      b'\xf1\x8b %\x12\x17 %\x12\x17 %\x12\x04 %\x12\x05',
+    ],
+    (Ecu.eps, 0x7d4, None): [
+      b'\xf1\x00LX3 MDPS R 1.00 1.03 57700DU000  2591_LX3kH_RLN103',
+    ],
+    (Ecu.engine, 0x7e0, None): [
+      b'\xf1\x87391X62S003\xf1\x8225A1LXXHHMXXXX9F',
+      b'25A1LXXHHMXXXX9F',
+    ],
+    (Ecu.transmission, 0x7e1, None): [
+      b'\xf1\x00PSBG2913  P28\x00\x00\x00\x00\x00\x00\x002561HLX3T25HXNS19\xe7\x15b',
+      b'\xf1\x87954413U020\xf1\x89P28\x00\x00\x00\x00\x00\x00\x00\xf1\x822561HLX3T25HXNS1',
+      b'2561HLX3T25HXNS1',
+    ],
+  },
   CAR.HYUNDAI_VELOSTER: {
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00JS__ SCC H-CUP      1.00 1.02 95650-J3200         ',

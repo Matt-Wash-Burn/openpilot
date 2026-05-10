@@ -323,6 +323,17 @@ class CAR(Platforms):
     CarSpecs(mass=1999, wheelbase=2.9, steerRatio=15.6 * 1.15, tireStiffnessFactor=0.63),
     flags=HyundaiFlags.MANDO_RADAR | HyundaiFlags.CHECKSUM_CRC8,
   )
+  HYUNDAI_PALISADE_HEV = HyundaiCanFDPlatformConfig(
+      # 2nd-gen Palisade (LX3 chassis), CAN-FD HDA1 + camera-side SCC.
+      # HEV trim. ICE/PHEV variants will be separate platforms if/when added.
+      # Auto-detected at runtime in interface.py: HYBRID, CANFD_ALT_BUTTONS, CANFD_CAMERA_SCC.
+      [HyundaiCarDocs("Hyundai Palisade Hybrid 2026", "All", car_parts=CarParts.common([CarHarness.hyundai_n]))],
+      # mass: top of LX3 curb-weight range 1985-2165 kg (HEV is heaviest)
+      # wheelbase: 2970 mm per Hyundai spec
+      # steerRatio: starting estimate; tune from steering learner data
+      # tireStiffnessFactor: starting at LX2's 0.63; tune from data
+      CarSpecs(mass=2165, wheelbase=2.97, steerRatio=15.0 * 1.15, tireStiffnessFactor=0.63),
+    )
   HYUNDAI_VELOSTER = HyundaiPlatformConfig(
     [HyundaiCarDocs("Hyundai Veloster 2019-20", min_enable_speed=5. * CV.MPH_TO_MS, car_parts=CarParts.common([CarHarness.hyundai_e]))],
     CarSpecs(mass=2917 * CV.LB_TO_KG, wheelbase=2.8, steerRatio=13.75 * 1.15, tireStiffnessFactor=0.5),
